@@ -5,6 +5,7 @@
 	"homepage": "https://thegreatoutdoors.community/",
 	"repository": "https://github.com/tgoHQ/knowledgebase",
 	"bugs": "https://github.com/tgoHQ/knowledgebase/issues",
+	"packageManager": "pnpm@10.24.0",
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro start",
