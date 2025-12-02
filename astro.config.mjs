@@ -70,7 +70,7 @@ export default defineConfig({
 			plugins: [starlightImageZoomPlugin(), inoxToolsStarWarp()],
 			title: 'The Great Outdoors',
 			editLink: {
-				baseUrl: 'https://github.com/tgoHQ/knowledgebase/tree/main',
+				baseUrl: 'https://github.com/tgoHQ/guide/tree/main',
 			},
 			logo: {
 				src: './src/assets/brand/wordmark.svg',
@@ -86,7 +86,7 @@ export default defineConfig({
 			social: {
 				discord:
 					'https://discord.gg/the-great-outdoors-345621611770282004',
-				github: 'https://github.com/tgoHQ/knowledgebase',
+				github: 'https://github.com/tgoHQ/guide',
 			},
 			components: {
 				Head: './src/components/starlight/Head.astro',

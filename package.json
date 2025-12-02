@@ -2,9 +2,9 @@
 	"name": "starlight",
 	"type": "module",
 	"private": true,
-	"homepage": "https://thegreatoutdoors.community/",
-	"repository": "https://github.com/tgoHQ/knowledgebase",
-	"bugs": "https://github.com/tgoHQ/knowledgebase/issues",
+	"homepage": "https://thegreatoutdoors.guide/",
+	"repository": "https://github.com/tgoHQ/guide",
+	"bugs": "https://github.com/tgoHQ/guide/issues",
 	"packageManager": "pnpm@10.24.0",
 	"scripts": {
 		"dev": "astro dev",

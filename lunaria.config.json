@@ -1,7 +1,7 @@
 {
 	"$schema": "./node_modules/@lunariajs/core/config.schema.json",
 	"repository": {
-		"name": "tgoHQ/knowledgebase",
+		"name": "tgoHQ/guide",
 		"hosting": "github"
 	},
 	"defaultLocale": { "label": "English", "lang": "en" },
