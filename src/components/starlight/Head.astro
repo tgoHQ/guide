@@ -1,9 +1,6 @@
 ---
-import type { Props } from '@astrojs/starlight/props';
 import StarlightHead from '@astrojs/starlight/components/Head.astro';
 import VtbotStarlight from 'astro-vtbot/components/starlight/Base.astro';
-
-// import { pwaInfo } from 'virtual:pwa-info';
 ---
 
 <!-- https://events-3bg.pages.dev/jotter/starlight/guide/ -->
@@ -11,19 +8,5 @@ import VtbotStarlight from 'astro-vtbot/components/starlight/Base.astro';
 	<StarlightHead {...Astro.props}><slot /></StarlightHead>
 </VtbotStarlight>
 
-<!-- {pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />} -->
-<!-- <script>
-	import { registerSW } from 'virtual:pwa-register';
-
-	registerSW({
-		immediate: true,
-		onRegisteredSW(swScriptUrl) {
-			console.log('SW registered: ', swScriptUrl);
-		},
-		onOfflineReady() {
-			console.log('PWA application ready to work offline');
-		},
-	});
-</script> -->
 <meta name="theme-color" content="#137c5a" />
-<!-- todo link to central theme color -->
+<!-- todo link to tailwind config? -->

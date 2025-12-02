@@ -1,16 +1,18 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import tailwind from '@astrojs/tailwind';
 import metaTags from 'astro-meta-tags';
 import starlightImageZoomPlugin from 'starlight-image-zoom';
 import inoxToolsStarWarp from '@inox-tools/star-warp';
+import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://thegreatoutdoors.guide/',
+
 	prefetch: {
 		prefetchAll: true,
 	},
+
 	integrations: [
 		starlight({
 			lastUpdated: true,
@@ -29,16 +31,22 @@ export default defineConfig({
 					lang: 'en',
 				},
 			},
-			customCss: ['./src/tailwind.css'],
-			social: {
-				discord:
-					'https://discord.gg/the-great-outdoors-345621611770282004',
-				github: 'https://github.com/tgoHQ/guide',
-			},
+			customCss: ['./src/styles/global.css'],
+			social: [
+				{
+					icon: 'discord',
+					label: 'Discord',
+					href: 'https://discord.gg/the-great-outdoors-345621611770282004',
+				},
+				{
+					icon: 'github',
+					label: 'GitHub',
+					href: 'https://github.com/tgoHQ/guide',
+				},
+			],
 			components: {
 				Head: './src/components/starlight/Head.astro',
 				PageSidebar: './src/components/starlight/PageSidebar.astro',
-				PageTitle: './src/components/starlight/PageTitle.astro',
 				Footer: './src/components/starlight/Footer.astro',
 			},
 			sidebar: [
@@ -94,9 +102,11 @@ export default defineConfig({
 			],
 		}),
 
-		tailwind({
-			applyBaseStyles: false,
-		}),
 		metaTags(),
 	],
+
+	vite: {
+		//@ts-expect-error
+		plugins: [tailwindcss()],
+	},
 });

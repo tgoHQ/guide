@@ -7,9 +7,6 @@ const response = await fetch(
 );
 const data = await response.json();
 const { approximate_member_count: members } = data;
-
-// todo hook this up to translations
-// https://github.com/withastro/docs/blob/main/src/components/StarlightBanner.astro
 ---
 
 <aside class="not-content">
