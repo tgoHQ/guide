@@ -12,17 +12,16 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"generate-pwa-assets": "pwa-assets-generator --preset minimal public/favicon.svg",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
-		"check": "pnpm types && pnpm format",
+		"check": "pnpm types && pnpm format && pnpm knip",
 		"preinstall": "npx only-allow pnpm",
-		"types": "pnpm astro check"
+		"types": "pnpm astro check",
+		"knip": "knip --treat-config-hints-as-errors"
 	},
 	"dependencies": {
 		"@astro-community/astro-embed-youtube": "^0.5.9",
 		"@astrojs/check": "^0.9.6",
-		"@astrojs/markdown-remark": "^6.3.9",
 		"@astrojs/starlight": "^0.37.0",
 		"@astrojs/starlight-tailwind": "^4.0.2",
 		"@astrojs/vercel": "^9.0.2",
@@ -31,13 +30,13 @@
 		"astro": "^5.16.3",
 		"astro-meta-tags": "^0.4.0",
 		"astro-vtbot": "^2.1.9",
-		"mdast-util-to-string": "^4.0.0",
-		"reading-time": "^1.5.0",
 		"starlight-image-zoom": "^0.13.2",
 		"tailwindcss": "^4.1.17"
 	},
 	"devDependencies": {
 		"@types/node": "^24.10.1",
+		"knip": "^5.71.0",
+		"only-allow": "^1.2.2",
 		"prettier": "^3.7.3",
 		"sharp": "^0.34.5",
 		"typescript": "^5.9.3"

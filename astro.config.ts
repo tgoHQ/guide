@@ -4,10 +4,13 @@ import metaTags from 'astro-meta-tags';
 import starlightImageZoomPlugin from 'starlight-image-zoom';
 import inoxToolsStarWarp from '@inox-tools/star-warp';
 import tailwindcss from '@tailwindcss/vite';
+import vercelAdapter from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://thegreatoutdoors.guide/',
+	trailingSlash: 'never',
+	adapter: vercelAdapter(),
 
 	prefetch: {
 		prefetchAll: true,
