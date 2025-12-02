@@ -5,7 +5,5 @@
 		"sharp",
 		"@astrojs/starlight-tailwind"
 	],
-	"ignoreFiles": [
-		"src/styles/global.css"
-	]
+	"ignoreFiles": ["src/styles/global.css"]
 }
