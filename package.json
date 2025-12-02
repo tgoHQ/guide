@@ -17,8 +17,9 @@
 		"generate-pwa-assets": "pwa-assets-generator --preset minimal public/favicon.svg",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
-		"check": "astro check && pnpm format",
-		"preinstall": "npx only-allow pnpm"
+		"check": "pnpm types && pnpm format",
+		"preinstall": "npx only-allow pnpm",
+		"types": "pnpm astro check"
 	},
 	"dependencies": {
 		"@astro-community/astro-embed-youtube": "^0.5.3",
