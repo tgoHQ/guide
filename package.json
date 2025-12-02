@@ -14,6 +14,9 @@
 		"lunaria:preview": "lunaria preview",
 		"lunaria:build": "lunaria build",
 		"generate-pwa-assets": "pwa-assets-generator --preset minimal public/favicon.svg",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"check": "astro check && pnpm format",
 		"preinstall": "npx only-allow pnpm"
 	},
 	"dependencies": {
